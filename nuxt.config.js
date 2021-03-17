@@ -23,6 +23,7 @@ export default {
   plugins: [
   ],
 
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -38,7 +39,9 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'bootstrap-vue/nuxt'
   ],
+
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
