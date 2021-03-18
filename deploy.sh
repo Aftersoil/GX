@@ -251,6 +251,7 @@ deploy() {
   # 判断
   case $var in
     pull)
+      pull
     ;;
     push)
       push
