@@ -10,6 +10,65 @@ prompt() {
   echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶ $rear"
 }
 
+# pull
+pull () {
+  sleep 1s
+
+  if [ -d $r_item_rmgit ]; then
+  prompt
+  read -p "$r_item_rmgit ▶▶▶▶▶▶▶▶▶▶▶▶ 请选择是否拉取远程最新分支合并到本地, 输入(yes/no): " REPLACE
+  prompt
+    case $REPLACE in
+      [yY][eE][sS]|[yY])
+      # REPLACE="yes"
+      sleep 1s
+    ;;
+      [nN][oO]|[nN])
+      # REPLACE="no"
+      prompt
+      echo  -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 退出 pull, 请重新选择 $rear"
+      prompt
+      deploy
+    ;;
+    *)
+      prompt
+      echo  -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 您输入的有误请重新输入 $rear"
+      prompt
+      pull
+    esac
+  fi
+
+  sleep 1s
+
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 正在获取远分支请稍后... $rear"
+  git branch -r
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 远程分支获取完成. $rear"
+  prompt
+
+  read -p " ▶▶▶▶▶▶▶▶▶▶▶▶ 请输入你要拉取的分支: " temp_branch
+
+  # https://<USERNAME>.github.io/<REPO>  git@github.com:Aftersoil/Aftersoil-wiki.git
+  git pull origin "$temp_branch"
+
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 分支拉取成功, 并成功合并到本地分支 $rear"
+  prompt
+
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 重现编译现有环境, 请稍后... $rear"
+  prompt
+  npm install
+
+  prompt
+  echo -e "$before▶▶▶▶▶▶▶▶▶▶▶▶ 环境下载成功，请重启服务. $rear"
+  prompt
+
+  sleep 1s
+
+  exit
+}
+
 # push
 push() {
   sleep 1s
@@ -30,7 +89,7 @@ push() {
     ;;
     *)
       echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 您的输入有误请重新输入 [Y/n]  $rear"
-      build
+      push
     esac
   fi
 
@@ -85,8 +144,9 @@ push() {
     prompt
   ;;
   *)
-    echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 输入有误请新运行命令 $rear"
-    exit
+    prompt
+    echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 您的输入有误请重新选择 $rear"
+    push
   ;;
   esac
 
