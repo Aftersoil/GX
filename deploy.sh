@@ -151,6 +151,8 @@ push() {
   esac
 
   sleep 1s
+
+  exit
 }
 
 # build
