@@ -17,12 +17,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'assets/css/normalize.css',
+    'assets/font-awesome-4.7.0/css/font-awesome.min.css'
   ],
-
+  script: [
+    {src:"http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js"},
+  ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // { src: '~/plugins/vue-map.js' },
   ],
-
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
