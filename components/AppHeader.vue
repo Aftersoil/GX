@@ -6,19 +6,19 @@
           <div class="logo">
           </div>
           <div class="nav_font">
-            <p>湖南省邵阳市宝祥建筑工程公司</p>
+            <p>湖南省高祥科技有限公司</p>
             <p>Treasure Cheung construction company</p>
           </div>
         </div>
 
         <div class="top_r">
           <ul>
-            <li><a href="/">首页</a></li>
-            <li><a href="/about">关于我们</a></li>
-            <li><a href="/case">公司业绩</a></li>
-            <!-- <li><a href="/advisory">工程咨询</a></li> -->
-            <li><a href="/Intelligent">智能化工程</a></li>
-            <li><a href="/contact">联系我们</a></li>
+            <li><nuxt-link to="/">首页</nuxt-link></li>
+            <li><nuxt-link to="/about">关于我们</nuxt-link></li>
+            <li><nuxt-link to="/case">公司业绩</nuxt-link></li>
+            <li><nuxt-link to="/advisory">工程咨询</nuxt-link></li>
+            <li><nuxt-link to="/Intelligent">智能化工程</nuxt-link></li>
+            <li><nuxt-link to="/contact">联系我们</nuxt-link></li>
           </ul>
 
         </div>
@@ -28,27 +28,14 @@
 
     <!-- 轮播图 -->
      <div class="container">
-    <!-- 轮播图 -->
-     <!-- 轮播 -->
-      <b-carousel
-        :interval="3000"
-        img-width="1024"
-        img-height="480"
-        fade
-        indicators
-        style="text-shadow: 1px 1px 2px #333"
-        class="carousel"
-      >
-        <b-carousel-slide caption="Title1" text="subTitle1" img-src="~/assets/image/slider_01.jpg" ></b-carousel-slide>
-        <b-carousel-slide caption="Title2" text="subTitle2" img-src="~/assets/image/slider_02.jpg" ></b-carousel-slide>
-        <b-carousel-slide caption="Title3" text="subTitle3" img-src="~/assets/image/slider_03.jpg" ></b-carousel-slide>
-      </b-carousel>
+      <Banner/>
     </div>
 
   </section>
 </template>
 
 <script>
+import Banner from '@/components/Banner'
 export default {
   name:'AppHeader'
 }
@@ -142,6 +129,7 @@ p{
 }
 
 /* 轮播图 */
+
 
 
 </style>

@@ -1,12 +1,14 @@
 <!--  -->
 <template>
   <section class="container">
-        <b-breadcrumb :items="items" class="crumb"></b-breadcrumb>
+        <!-- 面包屑导航 -->
+        <b-breadcrumb :items="Breaditems"></b-breadcrumb>
+
         <h1><span>高祥业绩</span><br>
         <sub>Gaoxiang Performance</sub></h1>
         <!-- 主体内容布局 -->
           <div class="row bd1">
-             <div class="col-4">
+             <div class="col-4 ">
                  <b-card
                     title="万科金域华府"
                     sub-title="三、四期"
@@ -20,7 +22,7 @@
                     <b-card-text>
 
                     </b-card-text>
-                 <b-button  variant="primary" to="/buildingOne" >查看详情</b-button>
+                 <b-button variant="primary" :to="{ name: 'building-buildingOne' }" >查看详情</b-button>
                  <!-- <nuxt-link to="/building/buildingOne">详情</nuxt-link> -->
                 </b-card>
              </div>
@@ -36,7 +38,7 @@
                     style="max-width: 20rem;"
                     class="mb-2  cardItem"
                   >
-                  <b-button  variant="primary">查看详情</b-button>
+                  <b-button  variant="primary" :to="{ name: 'building-buildingTow' }">查看详情</b-button>
                   </b-card>
              </div>
 
@@ -51,7 +53,7 @@
                     style="max-width: 20rem;"
                     class="mb-2  cardItem"
                   >
-                  <b-button  variant="primary">查看详情</b-button>
+                  <b-button  variant="primary" :to="{ name: 'building-buildingThree' }">查看详情</b-button>
 
                   </b-card>
              </div>
@@ -71,13 +73,13 @@
                     style="max-width: 20rem;"
                     class="mb-2  cardItem"
                   >
-                   <b-button  variant="primary">查看详情</b-button>
+                  <b-button  variant="primary" :to="{ name: 'building-buildingFour' }">查看详情</b-button>
                   </b-card>
              </div>
 
              <div class="col-4">
                  <b-card
-                    title="长沙绿地湖湘中心项目"
+                    title="长沙绿地湖湘中心"
                     sub-title="S16地块2#-6#栋主体及地下室建安工程"
                     img-src="~/assets/image/case/4.jpg"
                     img-alt="Image"
@@ -86,7 +88,7 @@
                     style="max-width: 20rem;"
                     class="mb-2  cardItem"
                   >
-                    <b-button  variant="primary">查看详情</b-button>
+                  <b-button  variant="primary" :to="{ name: 'building-buildingFive' }">查看详情</b-button>
                   </b-card>
              </div>
 
@@ -101,45 +103,20 @@
                     style="max-width: 20rem;"
                     class="mb-2  cardItem"
                   >
-                   <b-button  variant="primary" >查看详情</b-button>
+                  <b-button  variant="primary" :to="{ name: 'building-buildingSix' }">查看详情</b-button>
                   </b-card>
              </div>
 
           </div>
 
-      <h1 class="mt-4 mt-4"><span>企业资质</span><br>
-      <sub>Gaoxiang Qualification</sub></h1>
 
-      <div class="row bd1 mb-5">
-        <div class="col-4 zitem bd1">
-          <img src="~/assets/image/certificate/z1.png">
-        </div>
-        <div class="col-4 zitem bd1">
-          <img src="~/assets/image/certificate/j1.png">
-        </div>
-        <div class="col-4 zitem bd1 wimg">
-          <img src="~/assets/image/certificate/j1.png">
-        </div>
-      </div>
-
-      <h1 class="mt-4 mt-4"><span>企业荣誉</span><br>
-      <sub>Gaoxiang Qualification</sub></h1>
-
-      <div class="row">
-        <div class="col-6 ritem bd1">
-          <img src="~/assets/image/certificate/r1.png">
-        </div>
-        <div class="col-6 ritem bd1">
-          <img src="~/assets/image/certificate/r2.png">
-        </div>
-      </div>
 
     <div class="mt-5 mb-5">
-      <b-button block class="btnlome" variant="primary">查看更多</b-button>
+      <!-- <b-button block class="btnlome" variant="primary" :to="{ name: 'honor' }" style="line-height:40px;">查看更多</b-button> -->
     </div>
 
     <!-- 底部联系我们 -->
-   <div class="mt-5 mb-5 ">
+   <div class="mt-5 mb-5 lxwm">
       <b-card
         overlay
         img-src="~/assets/image/lxwm.png"
@@ -147,8 +124,14 @@
         text-variant="white"
         class="imgcard"
         title="联系我们"
+        sub-title="Contact us"
       >
         <b-card-text>
+         <p>
+           <i class="fa fa-phone fa-lg"></i> : 13607431448
+         <br/>
+          <i class="fa fa-envelope"></i> : 274618330@qq.com
+         </p>
 
         </b-card-text>
       </b-card>
@@ -158,9 +141,8 @@
 </template>
 
 <script scoped>
-import Breadcrumb from '@/components/Breadcrumb'
 export default {
-  name:'Case',
+  name:'case',
   data () {
     return {
       //卡片数据
@@ -170,15 +152,41 @@ export default {
         { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') },
         // { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') }
       ],
+      //面包屑导航数据
+      Breaditems: [
+          {
+            text: '关于我们',
+            href: 'about'
+          },
+           {
+            text: '公司业绩',
+            active:true
+          },
+          {
+            text: '工程咨询',
+            href: 'advisory'
+          },
+          {
+            text: '智能化工程',
+            href: 'advisory'
+          },
+          {
+            text: '联系我们',
+            href: 'contact'
+
+          }
+        ]
     };
   },
   components: {
-    Breadcrumb,
   },
 }
 
 </script>
 <style scoped>
+.breadcrumb{
+  background-color: white;
+}
 .container{
   width: 1200px;
   transform-style: preserve-3d;
@@ -208,9 +216,7 @@ export default {
 .container .crumb{
   background-color:#ffff;
 }
-.bd1{
-  /* border: 1px solid red; */
-}
+
 .container {
   margin: 0 auto;
 }
@@ -238,8 +244,32 @@ export default {
 }
 .container  .card-title{
   padding-top: 50px;
+  font-size: 30px;
+
 }
 
+/* 联系我们 */
+.container .lxwm .card-title ,
+.container .lxwm .card-subtitle{
+  margin-left: 20px;
+}
+.container .lxwm .text-muted{
+  color: white !important;
+  font-family: Helvetica sans-serif;
+  font-size: 23px;
+}
+
+.container .lxwm .imgcard .card-text{
+  position: absolute;
+  display: block;
+  /* border: 1px solid #000; */
+  right: 30px;
+  bottom: 30px;
+  line-height: 35px;
+}
+.container .lxwm .imgcard .card-text p{
+  font-size: 18px;
+}
 
 
 /* 卡片阴影 */

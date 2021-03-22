@@ -10,7 +10,9 @@
             <p>Treasure Cheung construction company</p>
             <p>周一至周六 9:00 - 18:00</p>
             <div class="round">
-              <img src="~/assets/image/icon/lxwmh.png" alt="">
+               <nuxt-link  :to="{ name: 'contact' }">
+                <img src="~/assets/image/icon/lxwmh.png" alt="">
+              </nuxt-link>
             </div>
           </div>
 
@@ -22,11 +24,13 @@
 
         <!-- 底部右侧 -->
         <div class="detailed">
-          <div class="detil_img">
-            <img src="~/assets/image/icon/QQ.png" width="40" height="40">
-            <img src="~/assets/image/icon/微信.png" width="40" height="40">
-            <img src="~/assets/image/icon/wb.png" width="40" height="40">
-          </div>
+          <nuxt-link  :to="{ name: 'contact' }">
+            <div class="detil_img">
+              <img src="~/assets/image/icon/QQ.png" width="40" height="40">
+              <img src="~/assets/image/icon/微信.png" width="40" height="40">
+              <img src="~/assets/image/icon/wb.png" width="40" height="40">
+            </div>
+          </nuxt-link>
 
           <div class="detil_font">
             <span>联系人：高欢</span>
