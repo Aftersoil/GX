@@ -1,9 +1,8 @@
 <!--  -->
 <template>
   <section class="container">
-      <div class="bread_crumbs">
-        <a href="#" title="当前位置" alt="当前位置">您现在的位置：</a><a href="#" alt="当前位置">湖南高祥科技有限公司</a> > 公司概括
-      </div>
+       <b-breadcrumb :items="Breaditems"></b-breadcrumb>
+
       <p style="text-align: center;" class=" mt-2"><span>CONTACT US</span></p>
     <div class="zzCard mt-5">
       <b-jumbotron class="fiterCard">
@@ -47,6 +46,29 @@ export default {
   name:'Contact',
   data () {
     return {
+        Breaditems: [
+          {
+            text: '关于我们',
+            href: 'about'
+          },
+           {
+            text: '公司业绩',
+            href: 'case'
+          },
+          {
+            text: '工程咨询',
+            href: 'advisory'
+          },
+          {
+            text: '智能化工程',
+            href: 'advisory'
+          },
+          {
+            text: '联系我们',
+            active: true
+
+          }
+        ]
     };
   },
   components:{
@@ -58,6 +80,9 @@ export default {
 
 </script>
 <style scoped>
+.breadcrumb{
+  background-color: white;
+}
 .container {
   width: 1200px;
   height: 730px;

@@ -43,13 +43,13 @@
         </div>
 
         <div class="row mt-5">
-          <div class="col-3 mt-3">
-            <img src="~/assets/image/icon/abust_p1.png" width="64" height="63" alt="">
-          </div>
-          <div class="col-9 con">
-            <p>国际高水准团队</p>
-            <span >拥有来自德国、美国、日本、韩国等国家的高新技术团队。</span>
-          </div>
+            <div class="col-3 mt-3">
+              <img src="~/assets/image/icon/abust_p1.png" width="64" height="63" alt="">
+            </div>
+            <div class="col-9 con">
+              <p>国际高水准团队</p>
+              <span >拥有来自德国、美国、日本、韩国等国家的高新技术团队。</span>
+            </div>
         </div>
 
       </div>
@@ -58,33 +58,6 @@
       </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -125,17 +98,17 @@
           :key="index"
         >
         <b-card-text>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
         </b-card-text>
         </b-card>
     </div>
 
 
-
+    <BarkTop/>
   </section>
 </template>
 
 <script scoped>
+import BarkTop from '@/components/BarkTop'
 export default {
   name:'Index',
   data () {
