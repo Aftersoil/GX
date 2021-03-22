@@ -233,6 +233,124 @@ build_start() {
   sleep 1s
 }
 
+# release
+release() {
+  sleep 1s
+
+  if [ -d $judgment ]; then
+  prompt
+  read -p "$judgment ▶▶▶▶▶▶▶▶▶▶▶▶ 是否发布网站，输入(yes/no): " REPLACE
+  prompt
+    case $REPLACE in
+      [yY][eE][sS]|[yY])
+      # REPLACE="yes"
+      sleep 1s
+    ;;
+      [nN][oO]|[nN])
+      # REPLACE="no"
+      echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 退出 release，请重新选择 $rear"
+      deploy
+    ;;
+    *)
+      echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 您的输入有误请重新输入 [Y/n]  $rear"
+      release
+    esac
+  fi
+
+  release_build
+
+  sleep 1s
+}
+
+release_build() {
+  sleep 1s
+
+  # dist 删除文件
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 清除已存在文件 $rear"
+  prompt
+  rm -rf dist
+  rm -rf .nuxt
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 文件清除完成 $rear"
+  prompt
+
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 查看当前本地分支 $rear"
+  prompt
+  git branch
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 本地分支查看完成，没有 gh-pages 分支 $rear"
+  prompt
+
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 正在下载远程最新 gh-pages, 请稍候 $rear"
+  prompt
+  git fetch origin gh-pages:gh-pages
+  echo -e "$before' ▶▶▶▶▶▶▶▶▶▶▶▶ 远程 gh-pages 下载完成 $rear"
+  prompt
+
+  # 打包项目
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 开始打包项目 $rear"
+  prompt
+  build_start
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 项目打包完成 $rear"
+  prompt
+
+  # 切换分支
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 切换分支 $rear"
+  prompt
+  git checkout gh-pages
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 分支切换成功 $rear"
+  prompt
+
+  # 复制文件
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 开始将所有文件移到全局静态文件下 $rear"
+  prompt
+  # cd ..
+  cp -rvf dist/* GL
+  # cd GL
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 文件复制结束 $rear"
+  prompt
+
+  sleep 1s
+
+  echo  -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 查看当前分支状态 $rear"
+  prompt
+  git status
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 移动成功暂未提交 $rear"
+  prompt
+
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 开始提交暂存区,请稍后... $rear"
+  prompt
+  git add .
+  git status
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 文件已全部提交到暂存区 $rear"
+  prompt
+
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 开始向远 gh-pages 提交合并 $rear"
+  prompt
+  git push origin gh-pages
+  prompt
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 静态文件已成功提交，请转到GitHub查看是否提交成功 $rear"
+  prompt
+
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 查看您本地分支 $rear"
+  git branch
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 您本地分支如下 $rear"
+  read -p "▶▶▶▶▶▶▶▶▶▶▶▶ 请输入您的开发分支名称: " dev
+  echo  -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 正在切换分支请稍后... $rear"
+  git checkout "$dev"
+  git branch -D gh-pages
+  rm -rf dist
+  git branch
+  echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 切换成功，欢迎下次提交😊😊😊👌🌹 $rear"
+
+  sleep 1s
+}
+
 # 程序入口
 deploy() {
   sleep 1s
@@ -257,6 +375,7 @@ deploy() {
       push
     ;;
     release)
+      release
     ;;
     build)
       build
