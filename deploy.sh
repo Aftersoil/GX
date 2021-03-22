@@ -269,8 +269,8 @@ release_build() {
   prompt
   echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 清除已存在文件 $rear"
   prompt
-  rm -rf dist
-  rm -rf .nuxt
+  rm -rf /dist
+  # rm -rf .nuxt
   prompt
   echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 文件清除完成 $rear"
   prompt
@@ -307,7 +307,7 @@ release_build() {
   echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 开始将所有文件移到全局静态文件下 $rear"
   prompt
   # cd ..
-  cp -rvf dist/* GL
+  cp -rvf /dist/* GL
   # cd GL
   prompt
   echo -e "$before ▶▶▶▶▶▶▶▶▶▶▶▶ 文件复制结束 $rear"

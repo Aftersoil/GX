@@ -118,13 +118,13 @@ export default {
           { title: '万科金域华府',caption: 'Title2', tag: 'article', imgSrc: require('~/assets/image/case/001.jpg') },
           { title: '万科紫台',caption: 'Title2', tag: 'article', imgSrc:  require('~/assets/image/case/1.png') },
           { title: '万科白鹭郡小区',caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') },
-          // { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') }
+          { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') }
         ],
         carditemOne: [
         { title: '怀化碧桂园',caption: 'Title2', tag: 'article', imgSrc: require('~/assets/image/case/3.jpg') },
         { title: '碧桂园天阔小区',caption: 'Title2', tag: 'article', imgSrc:  require('~/assets/image/case/4.jpg') },
         { title: '长沙绿地湖湘中心',caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/5.jpg') },
-        // { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') }
+        { caption: 'Title3', tag: 'article', imgSrc:  require('~/assets/image/case/2.jpg') }
       ]
     };
   },
