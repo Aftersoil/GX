@@ -67,41 +67,161 @@
         <img src="~/assets/image/icon/al.jpg">
       </div>
     </div>
-    <div class="row cardlist mt-3 mb-3">
-        <b-card
-          :title="item.title"
-          :img-src="item.imgSrc"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem;"
-          class="mb-2  carditem"
-          v-for="(item,index) in carditem"
-          :key="index"
-        >
-        <b-card-text>
-        </b-card-text>
-        <!-- <NuxtLink to="/building/buildingOne">About Page</NuxtLink> -->
-        </b-card>
+    <div class="row bd1  mb-4">
+
+        <div class="col-4">
+          <nuxt-link style="color:#000" variant="primary" :to="{ name: 'building-buildingOne' }" >
+            <b-card
+              title="万科金域华府"
+              sub-title=""
+              img-src="~/assets/image/case/001.jpg"
+              img-alt="Image"
+              img-top
+              tag="article"
+              style="max-width: 20rem;"
+              class="mb-2  cardItem"
+            >
+            <!-- <nuxt-link to="/building/buildingOne">详情</nuxt-link> -->
+          </b-card>
+          </nuxt-link >
+        </div>
+
+        <div class="col-4 ">
+            <nuxt-link style="color:#000" :to="{ name: 'building-buildingTow' }">
+            <b-card
+              title="万科紫台"
+              sub-title=""
+              img-src="~/assets/image/case/1.png"
+              img-alt="Image"
+              img-top
+              tag="article"
+              style="max-width: 20rem;"
+              class="mb-2  cardItem"
+            >
+            </b-card>
+            </nuxt-link>
+        </div>
+
+        <div class="col-4 ">
+           <nuxt-link style="color:#000"  :to="{ name: 'building-buildingThree' }">
+            <b-card
+              title="万科白鹭郡小区"
+              sub-title=""
+              img-src="~/assets/image/case/2.jpg"
+              img-alt="Image"
+              img-top
+              tag="article"
+              style="max-width: 20rem;"
+              class="mb-2  cardItem"
+            >
+            </b-card>
+            </nuxt-link>
+        </div>
+
     </div>
 
-    <div class="row cardlist mb-3">
-        <b-card
-          :title="item.title"
-          :img-src="item.imgSrc"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem;"
-          class="mb-2  carditem"
-          v-for="(item,index) in carditemOne"
-          :key="index"
-        >
-        <b-card-text>
-        </b-card-text>
-        </b-card>
-    </div>
+        <!-- 主体内容布局 -->
+        <div class="row bd1  mb-4">
+             <div class="col-4">
+              <nuxt-link style="color:#000"  :to="{ name: 'building-buildingFour' }">
+                 <b-card
+                    title="怀化碧桂园"
+                    sub-title=""
+                    img-src="~/assets/image/case/10.jpg"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                    style="max-width: 20rem;"
+                    class="mb-2  cardItem"
+                  >
+                  </b-card>
+              </nuxt-link>
+             </div>
 
+             <div class="col-4">
+                <nuxt-link style="color:#000"  :to="{ name: 'building-buildingFive' }">
+                 <b-card
+                    title="长沙绿地湖湘中心"
+                    sub-title=""
+                    img-src="~/assets/image/case/4.jpg"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                    style="max-width: 20rem;"
+                    class="mb-2  cardItem"
+                  >
+                  </b-card>
+                </nuxt-link>
+             </div>
+
+             <div class="col-4">
+                 <nuxt-link style="color:#000"  :to="{ name: 'building-buildingSix' }">
+                 <b-card
+                    title="蓝光雍景半岛"
+                    sub-title=""
+                    img-src="~/assets/image/case/5.jpg"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                    style="max-width: 20rem;"
+                    class="mb-2  cardItem"
+                  >
+                  </b-card>
+                 </nuxt-link>
+             </div>
+
+          </div>
+<!--  -->
+          <div class="row bd1 mb-4">
+                  <div class="col-4">
+                  <nuxt-link style="color:#000"  :to="{ name: 'building-buildingSeven' }">
+                      <b-card
+                          title="郡原美村"
+                          sub-title=""
+                          img-src="~/assets/image/case/13.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        </b-card>
+                  </nuxt-link>
+                  </div>
+
+                  <div class="col-4">
+                      <nuxt-link style="color:#000"  :to="{ name: 'building-buildingEight' }">
+                      <b-card
+                          title="吉首市一中"
+                          sub-title=""
+                          img-src="~/assets/image/case/6.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        </b-card>
+                      </nuxt-link>
+                  </div>
+
+                  <div class="col-4">
+                      <nuxt-link style="color:#000"  :to="{ name: 'building-buildingNine' }">
+                      <b-card
+                          title="吉首市乾北公"
+                          sub-title=""
+                          img-src="~/assets/image/case/8.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        </b-card>
+                      </nuxt-link>
+                  </div>
+
+            </div>
 
     <BarkTop/>
   </section>

@@ -16,7 +16,7 @@
       <!-- Text slides with image -->
       <b-carousel-slide
         caption="建筑装修行业整合的生力军"
-        text="秉承“创新、绩效、和谐”的核心价值观。"
+        text="秉承 “用心做好每一件事” 的核心价值观。"
         img-src="~/assets/image/banner1.png"
       ></b-carousel-slide>
 
