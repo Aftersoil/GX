@@ -7,8 +7,8 @@
         <h1><span>高祥业绩</span><br>
         <sub>Gaoxiang Performance</sub></h1>
         <!-- 主体内容布局 -->
-          <div class="row bd1">
-             <div class="col-4 ">
+          <div class="row bd1  mb-4">
+             <div class="col-4">
                  <b-card
                     title="万科金域华府"
                     sub-title="三、四期"
@@ -27,7 +27,7 @@
                 </b-card>
              </div>
 
-             <div class="col-4">
+             <div class="col-4 ">
                  <b-card
                     title="万科紫台"
                     sub-title="1#-6#栋、12#-14#栋及一期A区地下室"
@@ -42,7 +42,7 @@
                   </b-card>
              </div>
 
-             <div class="col-4">
+             <div class="col-4 ">
                  <b-card
                     title="万科白鹭郡小区"
                     sub-title="三期（18#-26#栋、地下室)"
@@ -61,7 +61,7 @@
           </div>
 
         <!-- 主体内容布局 -->
-          <div class="row bd1">
+        <div class="row bd1  mb-4">
              <div class="col-4">
                  <b-card
                     title="怀化碧桂园"
@@ -108,6 +108,54 @@
              </div>
 
           </div>
+
+          <div class="row bd1 mb-4">
+                  <div class="col-4">
+                      <b-card
+                          title="郡原美村"
+                          sub-title="勘察设计施工总承包"
+                          img-src="~/assets/image/case/13.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        <b-button  variant="primary" :to="{ name: 'building-buildingSeven' }">查看详情</b-button>
+                        </b-card>
+                  </div>
+
+                  <div class="col-4">
+                      <b-card
+                          title="吉首市一中"
+                          sub-title="(迁建项目)勘察设计施工总承包"
+                          img-src="~/assets/image/case/6.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        <b-button  variant="primary" :to="{ name: 'building-buildingEight' }">查看详情</b-button>
+                        </b-card>
+                  </div>
+
+                  <div class="col-4">
+                      <b-card
+                          title="吉首市乾北公"
+                          sub-title="(租房项目)  勘察设计施工总承包"
+                          img-src="~/assets/image/case/8.png"
+                          img-alt="Image"
+                          img-top
+                          tag="article"
+                          style="max-width: 20rem;"
+                          class="mb-2  cardItem"
+                        >
+                        <b-button  variant="primary" :to="{ name: 'building-buildingNine' }">查看详情</b-button>
+                        </b-card>
+                  </div>
+
+            </div>
 
 
 
