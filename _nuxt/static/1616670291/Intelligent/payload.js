@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/Intelligent", {data:[{}],fetch:{},mutations:void 0});
