@@ -21,16 +21,24 @@
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="~/assets/image/banner2.png">
-        <h1>Hello world!</h1>
+      <b-carousel-slide
+        caption="建筑装修行业整合的生力军"
+        text="秉承 “用心做好每一件事” 的核心价值观。"
+       img-src="~/assets/image/banner2.png">
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="~/assets/image/banner3.png"></b-carousel-slide>
+      <b-carousel-slide
+        caption="高祥建筑科技有限公司"
+        text="曾荣获建筑工程鲁班奖"
+       img-src="~/assets/image/banner3.png"></b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
+      <b-carousel-slide
+       caption="建筑装修行业整合的生力军"
+        text="秉承 “用心做好每一件事” 的核心价值观。"
+      >
         <template #img>
           <img
             class="d-block img-fluid w-100"
@@ -42,7 +50,10 @@
         </template>
       </b-carousel-slide>
 
-      <b-carousel-slide>
+      <b-carousel-slide
+         caption="建筑装修行业整合的生力军"
+          text="秉承 “用心做好每一件事” 的核心价值观。"
+      >
         <template #img>
           <img
             class="d-block img-fluid w-100"

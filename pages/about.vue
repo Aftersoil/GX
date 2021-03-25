@@ -4,13 +4,6 @@
     <!-- <h5>关于我们</h5> -->
     <div class="row mb-4">
       <!-- 左侧 -->
-      <!-- <div class="col-3 bd1">
-
-        <div class="l-box mt-4">
-          <span class="t1">ABOUT US</span>
-          <span class="t2">关于我们</span>
-        </div>
-
       </div> -->
       <div class="row">
           <!-- 左侧 -->
