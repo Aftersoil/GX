@@ -35,7 +35,7 @@
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide 
+      <b-carousel-slide
        caption="建筑装修行业整合的生力军"
         text="秉承 “用心做好每一件事” 的核心价值观。"
       >
