@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/computer/computerFour", {data:[{}],fetch:{},mutations:void 0});

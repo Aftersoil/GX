@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/building/buildingFour", {data:[{}],fetch:{},mutations:void 0});
