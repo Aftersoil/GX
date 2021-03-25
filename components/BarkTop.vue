@@ -25,7 +25,7 @@ export default {
           $(backToTop).on('click', function () {
             $("html,body").stop().animate({
               scrollTop: 0
-            }, 1000);
+            }, 350);
           });
         });
     })
@@ -42,5 +42,6 @@ export default {
   position:fixed;
   bottom: 150px;
   background-color: rgba(#000,#000,#000,.5);
+  cursor: pointer;
 }
 </style>

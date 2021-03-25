@@ -1,9 +1,10 @@
 <!--  -->
 <template>
+<div>
   <section class="container">
-       <b-breadcrumb :items="Breaditems"></b-breadcrumb>
+      <b-breadcrumb :items="Breaditems"></b-breadcrumb>
 
-      <p style="text-align: center;" class=" mt-2"><span>CONTACT US</span></p>
+    <p style="text-align: center;" class=" mt-2"><span>CONTACT US</span></p>
     <div class="zzCard mt-5">
       <b-jumbotron class="fiterCard">
         <template #header>联系我们</template>
@@ -34,14 +35,16 @@
       </b-jumbotron>
     </div>
 
-
-
-
   </section>
+  <!-- map -->
+  <Map />
+  </div>
 </template>
 
 <script scoped>
-import Addres from '@/components/Addres'
+import Map from '@/components/Map';
+import Addres from '@/components/Addres';
+
 export default {
   name:'Contact',
   data () {
@@ -73,8 +76,8 @@ export default {
   },
   components:{
     Addres,
+    Map,
   }
-
 
 }
 

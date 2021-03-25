@@ -3,6 +3,7 @@
     <AppHeader />
     <Nuxt />
     <AppFooter />
+    <BarkTop/>
   </div>
 </template>
 
