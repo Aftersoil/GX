@@ -223,12 +223,10 @@
 
             </div>
 
-    <BarkTop/>
   </section>
 </template>
 
 <script scoped>
-import BarkTop from '@/components/BarkTop'
 export default {
   name:'Index',
   data () {
