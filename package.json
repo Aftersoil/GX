@@ -1,12 +1,19 @@
 {
-  "name": "GX",
+  "name": "gx",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --open",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "bash deploy.sh"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "3000"
+    }
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
@@ -15,6 +22,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",
+    "jquery": "^3.6.0",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
     "nuxt": "^2.14.12",
